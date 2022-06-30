@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "angelika-playfull";
+    src: url("./angelika-playfull-font/AngelikaPlayfull-2Og5l.otf");
+}
+
+@font-face {
+    font-family: "BeWildBrush";
+    src: url("./be-wild-brush-font/BeWildBrushFont-8M48Z.otf");
+}
+
+@font-face {
+    font-family: "ChuterolkFreeRegular";
+    src: url("./chuterolk-font/ChuterolkFreeRegular-L3R55.ttf");
+}
+
+@font-face {
+    font-family: "ChuterolkFreeRounded";
+    src: url('./chuterolk-font/ChuterolkFreeRounded-PKr5d.ttf');
+}
+
+@font-face {
+    font-family: "GistLight";
+    src: url('./gist-light/GistLight.otf');
+}
+
+@font-face {
+    font-family: "HamburgeRegular";
+    src: url("./hamburge-font/HamburgeRegular-eZjXB.ttf");
+}
+
+@font-face {
+    font-family: "Marchellia";
+    src: url("./marchellia-font/Marchellia-8MYOD.ttf");
+}
+
+@font-face {
+    font-family: "MicolestherFreeBold";
+    src: url("./micolesther-font/MicolestherFreeBold-YzADj.ttf");
+}
+
+@font-face {
+    font-family: "MicolestherFreeRegular";
+    src: url("./micolesther-font/MicolestherFreeRegular-rg8oO.ttf");
+}
+
+@font-face {
+    font-family: "RoguelandFreeRegular";
+    src: url("./ncs-rogueland-font/RoguelandFreeRegular-lgBow.ttf");
+}
+
+@font-face {
+    font-family: "Pinmold Regular";
+    src: url("./pinmold/Pinmold\ Regular\ DEMO.otf");
+}
+
+@font-face {
+    font-family: "RoguelandSlabBold";
+    src: url("./rogueland-slab-font/RoguelandSlabBold-1GZyj.ttf");
+}
+
+@font-face {
+    font-family: "Vonique";
+    src: url("./vonique-64/Vonique\ 64.ttf");
+}
+
+@font-face {
+    font-family: "Vonique Bold";
+    src: url("./vonique-64/Vonique\ 64\ Bold.ttf");
+}
+
+@font-face {
+    font-family: "Vonique Bold Italic";
+    src: url("./vonique-64/Vonique\ 64\ Bold\ Italic.ttf");
+}
+
+@font-face {
+    font-family: "Vonique Italic";
+    src: url("./vonique-64/Vonique\ 64\ Italic.ttf");
+}
