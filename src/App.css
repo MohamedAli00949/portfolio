@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  height: 100wh;
+  height: 100vh;
   margin: 0;
   font-family: "HamburgeRegular";
 }
@@ -19,6 +19,7 @@ ul {
 header.scrolling {
   background-color: #173953c1;
   backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 4px;
 }
 
 div.nav-container {
@@ -70,6 +71,36 @@ button.nav-menu {
   backdrop-filter: blur(10px);
 }
 
+.nav-menu {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-menu ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 30px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-menu .close {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-container {
   color: rgb(255, 255, 255);
   position: absolute;
@@ -99,6 +130,11 @@ button.nav-menu {
 .home-container .logo {
   font-size: 82px;
   margin-inline: 0;
+}
+
+.home-container p.details {
+  font-size: 25px;
+  margin-block: 0px;
 }
 
 .social-media {
@@ -425,7 +461,7 @@ footer {
 /* Start Responisve Design */
 @media screen and (max-width: 900px) {
   .home-container p:first-of-type {
-    margin: 0;  
+    margin: 0;
   }
 
   .home-container h1 {
@@ -436,6 +472,10 @@ footer {
 @media screen and (max-width: 768px) {
   .nav-section {
     display: none;
+  }
+
+  .nav-menu {
+    display: flex;
   }
 
   div.nav-container {
@@ -458,12 +498,74 @@ footer {
   ul.skills-container {
     gap: 15px;
   }
+
+  .home-container {
+    gap: 25px;
+  }
+
+  .home-container p:first-of-type {
+    font-size: 70px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 65px;
+  }
+
+  .home-container p.details {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .home-container {
+    gap: 20px;
+  }
+
+  .home-container p:first-of-type {
+    font-size: 65px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 52px;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .footer-container {
     justify-content: center;
     flex-direction: column;
+  }
+
+  .home-container {
+    gap: 10px;
+  }
+
+  .home-container p:first-of-type {
+    font-size: 60px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home-container p:first-of-type {
+    font-size: 44px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 40px;
+  }
+
+  .home-container p.details {
+    margin-block: 0px;
+    font-size: 22px;
+    margin-inline: 10px;
   }
 }
 /* End Responisve Design */

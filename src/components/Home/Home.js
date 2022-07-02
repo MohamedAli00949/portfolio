@@ -52,7 +52,7 @@ const Home = () => {
                     Mohamed Ali Fawzi
                   </span>
                 </h1>
-                <p style={{ fontSize: "25px", marginBlock: "0px" }}>
+                <p className="details">
                   I am{" "}
                   <strong style={{ color: "rgb(106, 223, 255)" }}>
                     Software Engineer
