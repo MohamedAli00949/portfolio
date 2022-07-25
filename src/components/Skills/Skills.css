@@ -1,0 +1,103 @@
+/* start skills section*/
+section#Skills h2 {
+  font-size: 40px;
+  margin-block: 20px;
+  color: #09c6f9;
+  text-shadow: 2px 2px 5px #00000059;
+  text-align: center;
+}
+
+ul.skills-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-container .skill-card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  background: #265585;
+  box-shadow: 0 0 3px 3px #489ff8c4;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-container .skill-card .circle,
+.skills-container .skill-card .circle svg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.circle svg {
+  transform: rotate(270deg);
+}
+
+.skills-container .skill-card .circle {
+  background: #9098a080;
+  border-radius: 50%;
+}
+
+.skills-container .skill-card .circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 10;
+  stroke: #ffffffec;
+  transform: translate(5px, 5px);
+}
+
+.skills-container .skill-card .circle svg circle:nth-child(2) {
+  stroke: #09c6f9;
+  stroke-width: 5;
+  stroke-dasharray: 440;
+}
+
+.skill-card .dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  transform: rotate(calc(3.6deg * var(--present)));
+}
+
+.dot::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -7.5px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  background: #09c6f9;
+  box-shadow: 0 0 10px #09c6f9, 0 0 30px #09c6f9;
+}
+
+.skill-details {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  flex-direction: column-reverse;
+  color: white;
+  font-weight: 700;
+}
+
+.skill-details p {
+  margin-block: 0px;
+}
+
+.skill-details p:nth-child(2) {
+  font-size: 35px;
+  text-shadow: 0 0 6px #2c2e3d;
+  margin-bottom: 0;
+}
+
+/* end skills section*/

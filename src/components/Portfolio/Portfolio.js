@@ -1,15 +1,16 @@
-import React from "react";
-import { Button, Container } from "@mui/material";
+import React, { Suspense, lazy } from "react";
 import { AiFillGithub, AiFillEye } from "react-icons/ai";
 
-import phonebook from "../../images/phonebook.png";
-import wouldYouRather from "../../images/would-you-rather.png";
-import autowats from "../../images/autowats.png";
-import landingPage from "../../images/landing-page.png";
-import sampleTwitter from "../../images/sample-twitter.png";
-import myreads from "../../images/myreads.png";
+import phonebook from "../../images/phonebook.webp";
+import wouldYouRather from "../../images/would-you-rather.webp";
+import autowats from "../../images/autowats.webp";
+import landingPage from "../../images/landing-page.webp";
+import sampleTwitter from "../../images/sample-twitter.webp";
+import myreads from "../../images/myreads.webp";
 
-import noImage from "../../images/no image.jpg";
+import noImage from "../../images/no image.webp";
+const Container = lazy(() => import("@mui/material/Container"));
+const Button = lazy(() => import("@mui/material/Button"));
 
 const Portfolio = () => {
   const projects = [
@@ -52,49 +53,83 @@ const Portfolio = () => {
     },
   ];
   return (
-    <section id="Portfolio" style={{ background: "#def8ff", padding: "132px 0" }}>
-      <Container fixed>
-        <div>
-          <p>Selected works</p>
-          <h2>Portfolio</h2>
-          <ul>
-            {projects.map((project, index) => (
-              <li className="project" key={index} style={{ marginInline: "10px" }}>
-                <div className="innerDiv">
-                  <div className="cover">
-                    <img src={noImage} alt="no" />
-                    <div
-                      className="main-cover"
-                      style={{ backgroundImage: `url(${project.cover})` }}
-                    ></div>
-                  </div>
-                  <div className="overflow"></div>
-                  <div className="project-details">
-                    <p
-                      style={{
-                        fontSize: "23px",
-                        marginBlock: "10px",
-                        color: "white",
-                        textTransform: "capitalize"
-                      }}
-                    >
-                      {project.name}
-                    </p>
-                    <div className="code">
-                      <Button href={project.github} target="_blank" startIcon={<AiFillGithub />} variant="contained" style={{background: "#09c6f9"}}>
-                        Code in github
-                      </Button>
+    <section
+      id="Portfolio"
+      style={{ background: "#def8ff", padding: "132px 0" }}
+    >
+      <Suspense
+        fallback={(() => (
+          <p>Loading...</p>
+        ))()}
+      >
+        <Container fixed>
+          <div>
+            <p>Selected works</p>
+            <h2>Portfolio</h2>
+            <ul>
+              {projects.map((project, index) => (
+                <li
+                  className="project"
+                  key={index}
+                  style={{ marginInline: "10px" }}
+                >
+                  <div className="innerDiv">
+                    <div className="cover">
+                      <img
+                        src={noImage}
+                        alt="no"
+                        width="100%"
+                        height="100%"
+                      />
+                      <div
+                        className="main-cover"
+                        style={{ backgroundImage: `url(${project.cover})` }}
+                      ></div>
                     </div>
-                    <div className="code">
-                      <Button  href={project.demo} target="_blank" startIcon={<AiFillEye />} variant="contained" style={{background: "#09c6f9"}}>Show the demo</Button>
+                    <div className="overflow"></div>
+                    <div className="project-details">
+                      <p
+                        style={{
+                          fontSize: "23px",
+                          marginBlock: "10px",
+                          color: "white",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {project.name}
+                      </p>
+                      <div className="code">
+                        <Button
+                          aria-label={`${project.name} github`}
+                          href={project.github}
+                          target="_blank"
+                          startIcon={<AiFillGithub />}
+                          variant="contained"
+                          style={{ background: "#09c6f9" }}
+                        >
+                          Code in github
+                        </Button>
+                      </div>
+                      <div className="code">
+                        <Button
+                          aria-label={`${project.name} code`}
+                          href={project.demo}
+                          target="_blank"
+                          startIcon={<AiFillEye />}
+                          variant="contained"
+                          style={{ background: "#09c6f9" }}
+                        >
+                          Show the demo
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Container>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Container>
+      </Suspense>
     </section>
   );
 };

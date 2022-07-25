@@ -27,6 +27,7 @@ const Navbar = () => {
       <div className="nav-menu">
         <div className="close">
           <IconButton
+            aria-label="menu"
             style={{
               border: "2px solid #000",
               padding: "10px",
@@ -105,6 +106,7 @@ const Navbar = () => {
             </ul>
             <div>
               <IconButton
+                aria-label="navMenu"
                 className="nav-menu"
                 onClick={() => {
                   setOpenMenu(true);

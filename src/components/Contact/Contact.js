@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { Button, Container } from "@mui/material";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import Input from "../../utils/Inputs";
+
+const Input = lazy(() => import("../../utils/Inputs"));
+const Container = lazy(() => import("@mui/material/Container"));
+const Button = lazy(() => import("@mui/material/Button"));
 
 const Contact = () => {
   const [successSend, setSuccessSend] = useState(false);
@@ -12,12 +14,20 @@ const Contact = () => {
     message: "",
   });
 
+  useEffect(() => {
+    if (successSend) {
+      setTimeout(() => {
+        setSuccessSend((pS) => !pS);
+      }, 10000);
+    }
+  }, [successSend]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setSuccessSend(true)
+    setSuccessSend(true);
     console.log(messageData);
-    setMessageData({name: "", email: "", phone: "", message: ''})
+    setMessageData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -28,67 +38,91 @@ const Contact = () => {
         background: "#def8ff",
       }}
     >
-      <Container fixed>
-        <div>
-          <h2>Contact</h2>
+      <Suspense
+        fallback={(() => (
+          <p>Loading...</p>
+        ))()}
+      >
+        <Container fixed>
           <div>
+            <h2>Contact</h2>
             <div>
-              <form className="inputs" onSubmit={handleSubmit}>
-              {successSend ? (<div>Thanks for sending the message.</div>): null}
-                <Input
-                  type="text"
-                  name="Name"
-                  placeholder="Enter your name"
-                  required
-                  value={messageData.name}
-                  onChange={(e) => {
-                    setMessageData({ ...messageData, name: e.target.value });
-                  }}
-                />
-                <Input
-                  type="email"
-                  name="Email"
-                  placeholder="Enter your email"
-                  required
-                  value={messageData.email}
-                  onChange={(e) => {
-                    setMessageData({ ...messageData, email: e.target.value });
-                  }}
-                />
-                <Input
-                  type="tel"
-                  name="Phone"
-                  placeholder="Enter your phone"
-                  required
-                  value={messageData.phone}
-                  onChange={(e) => {
-                    setMessageData({ ...messageData, phone: e.target.value });
-                  }}
-                />
-                <Input
-                  type="textarea"
-                  name="Message"
-                  placeholder="Write your message"
-                  required
-                  value={messageData.message}
-                  onChange={(e) => {
-                    setMessageData({ ...messageData, message: e.target.value });
-                  }}
-                />
-                <Button
-                  variant="contained"
-                  type="submit"
-                  disabled={messageData.name === "" || messageData.email === "" || messageData.phone === "" || messageData.message === ""}
-                  endIcon={<IoIosSend />}
-                  style={{ textTransform: "capitalize" }}
-                >
-                  Submit the message
-                </Button>
-              </form>
+              <div>
+                <form className="inputs" onSubmit={handleSubmit}>
+                  {successSend ? (
+                    <div className="success">
+                      Thanks for sending the message.
+                      <div>
+                        <span className="theUpper"></span>
+                        <span className="the"></span>
+                      </div>
+                    </div>
+                  ) : null}
+                  <Input
+                    type="text"
+                    name="Name"
+                    placeholder="Enter your name"
+                    required
+                    value={messageData.name}
+                    onChange={(e) => {
+                      setMessageData({ ...messageData, name: e.target.value });
+                    }}
+                  />
+                  <Input
+                    type="email"
+                    name="Email"
+                    placeholder="Enter your email"
+                    required
+                    value={messageData.email}
+                    onChange={(e) => {
+                      setMessageData({ ...messageData, email: e.target.value });
+                    }}
+                  />
+                  <Input
+                    type="tel"
+                    name="Phone"
+                    placeholder="Enter your phone"
+                    required
+                    value={messageData.phone}
+                    onChange={(e) => {
+                      setMessageData({ ...messageData, phone: e.target.value });
+                    }}
+                  />
+                  <Input
+                    type="textarea"
+                    name="Message"
+                    placeholder="Write your message"
+                    required
+                    value={messageData.message}
+                    onChange={(e) => {
+                      setMessageData({
+                        ...messageData,
+                        message: e.target.value,
+                      });
+                    }}
+                  />
+                  {/* <Suspense fallback={() => <p>Loading...</p>}></Suspense> */}
+                  <Button
+                    aria-label="submit data"
+                    variant="contained"
+                    type="submit"
+                    disabled={
+                      messageData.name === "" ||
+                      messageData.email === "" ||
+                      messageData.phone === "" ||
+                      messageData.message === ""
+                    }
+                    endIcon={<IoIosSend />}
+                    style={{ textTransform: "capitalize" }}
+                  >
+                    Submit the message
+                  </Button>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </Suspense>
     </section>
   );
 };

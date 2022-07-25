@@ -1,0 +1,185 @@
+.home-container {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -30%);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  place-content: center;
+  align-items: center;
+}
+
+.home-container p:first-of-type {
+  font-size: 93px;
+  margin-block: 20px 0px;
+  color: rgb(106, 223, 255);
+  text-shadow: rgba(0, 0, 0, 0.37) 2px -1px 0px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.home-container h1 {
+  margin-block: 10px;
+  font-size: 80px;
+}
+
+.home-container .logo {
+  font-size: 82px;
+  margin-inline: 0;
+}
+
+.home-container p.details {
+  font-size: 28px;
+  margin-inline: 10px;
+  margin-block: 0px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a.social-icon {
+  font-size: 35px;
+  margin-inline: 10px;
+  color: rgb(255, 255, 255);
+  padding: 0 6.5px;
+  margin: 0;
+}
+
+a.social-icon:hover {
+  color: #09c6f9;
+}
+
+a.facebook:hover {
+  color: #1b74e4;
+}
+
+a.linkedin:hover {
+  color: #0a66c2;
+}
+
+#arrow {
+  transition: all;
+  position: absolute;
+  top: 75px;
+  animation-name: arrow;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes arrow {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 60px;
+  }
+}
+
+/* start responsive design */
+@media screen and (max-width: 900px) {
+  .home-container p:first-of-type {
+    margin: 0;
+  }
+
+  .home-container h1 {
+    margin: 0;
+  }
+
+  @keyframes arrow {
+    0% {
+      top: 40px;
+    }
+
+    100% {
+      top: 120px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    gap: 25px;
+  }
+
+  .home-container p:first-of-type {
+    font-size: 93px;
+  }
+
+  @keyframes arrow {
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: 125px;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  @keyframes arrow {
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .home-container {
+    gap: 20px;
+  }
+
+  .home-container p:first-of-type {
+    font-size: 65px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 72px;
+    margin-inline: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-container p:first-of-type {
+    font-size: 93px;
+  }
+
+  @keyframes arrow {
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: 75px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home-container p:first-of-type {
+    font-size: 44px;
+  }
+
+  .home-container h1,
+  .home-container .logo {
+    font-size: 40px;
+  }
+
+  .home-container p.details {
+    margin-block: 0px;
+    font-size: 22px;
+    margin-inline: 10px;
+  }
+}
+/* End Responisve Design */

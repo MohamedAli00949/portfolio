@@ -14,7 +14,7 @@ const Input = ({ type, name, placeholder, required, onChange, value }) => {
           onChange={onChange}
           value={value}
           onBlur={(e) => {
-            if (e.target.value !== "") {
+            if (e.target.value !== "" || value !== "") {
               e.target.nextElementSibling.classList.add("filled");
             } else {
               e.target.nextElementSibling.classList.remove("filled");
@@ -33,7 +33,7 @@ const Input = ({ type, name, placeholder, required, onChange, value }) => {
           onChange={onChange}
           value={value}
           onBlur={(e) => {
-            if (e.target.value !== "") {
+            if (e.target.value !== "" || value !== "") {
               e.target.nextElementSibling.classList.add("filled");
             } else {
               e.target.nextElementSibling.classList.remove("filled");
@@ -41,7 +41,7 @@ const Input = ({ type, name, placeholder, required, onChange, value }) => {
           }}
         ></textarea>
       )}
-      <label className="label" for={name}>
+      <label className="label" htmlFor={name}>
         {name}
       </label>
     </div>

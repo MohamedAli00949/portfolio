@@ -1,0 +1,14 @@
+/*start about section*/
+
+section#About h2 {
+    font-size: 40px;
+    margin-block: 20px;
+    color: #09c6f9;
+    text-shadow: 2px 2px 5px #00000059;
+  }
+  
+  section#About p {
+    font-size: 18px;
+  }
+  
+  /*end about section*/

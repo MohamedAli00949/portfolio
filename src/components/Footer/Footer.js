@@ -7,9 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <Container fixed>
-        <div
-          className="footer-container"
-        >
+        <div className="footer-container">
           <h1 style={{ margin: "10px 0" }}>
             <Link
               className="logo"
@@ -26,9 +24,10 @@ const Footer = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{margin: 0, fontSize: 20}}>Connect</p>
+            <p style={{ margin: 0, fontSize: 20 }}>Connect</p>
             <div className="social-media">
               <Link
+                aria-label="facebook"
                 href="https://www.facebook.com/mohammed.alifawze/"
                 className="social-icon facebook"
                 target="_blank"
@@ -36,6 +35,7 @@ const Footer = () => {
                 <FaFacebookSquare />
               </Link>
               <Link
+                aria-label="linkedin"
                 href="https://www.linkedin.com/in/mohamed-ali-fawzi-hassan-596318203/"
                 className="social-icon linkedin"
                 target="_blank"
@@ -43,6 +43,7 @@ const Footer = () => {
                 <FaLinkedin />
               </Link>
               <Link
+                aria-label="github"
                 href="https://github.com/MohamedAli00949"
                 className="social-icon github"
                 target="_blank"

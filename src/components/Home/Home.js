@@ -1,10 +1,11 @@
-import React from "react";
-import { Container, Link, Slide } from "@mui/material";
-import Image from "../../images/james-wheeler-AFC0XvICMgs-unsplash.jpg";
-import Navbar from "./../Navbar/Navbar";
+import React, { lazy, Suspense } from "react";
+import Image from "../../images/james-wheeler-AFC0XvICMgs-unsplash.webp";
 
-import { FaFacebookSquare, FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdOutlineDoubleArrow } from "react-icons/md";
+const Navbar = lazy(() => import("./../Navbar/Navbar"));
+const Container = lazy(() => import("@mui/material/Container"));
+const Slide = lazy(() => import("@mui/material/Slide"));
+const Link = lazy(() => import("@mui/material/Link"));
 
 const Home = () => {
   return (
@@ -17,103 +18,105 @@ const Home = () => {
         flexDirection: "column",
       }}
     >
-      <Navbar />
-      <section id="Home" className="section-container">
-        <Container
-          fixed
-          style={{ textAlign: "center", margin: "auto", width: "100%" }}
-        >
-          <Slide
-            direction="down"
-            in
-            style={{
-              textAlign: "center",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
+      <Suspense
+        fallback={(() => (
+          <p>Loading...</p>
+        ))()}
+      >
+        <Navbar />
+        <section id="Home" className="section-container">
+          <Container
+            fixed
+            style={{ textAlign: "center", margin: "auto", width: "100%" }}
           >
-            <div
+            <Slide
+              direction="down"
+              in
               style={{
-                margin: "auto",
+                textAlign: "center",
                 display: "flex",
-                alignItems: "center",
-                justifyContent: "space-around",
-                height: "max-content",
+                flexDirection: "column",
+                justifyContent: "center",
               }}
             >
-              <div className="home-container">
-                <p>Hey</p>
-                <h1>
-                  I am{" "}
-                  <span
-                    className="logo"
-                  >
-                    Mohamed Ali Fawzi
-                  </span>
-                </h1>
-                <p className="details">
-                  I am{" "}
-                  <strong style={{ color: "rgb(106, 223, 255)" }}>
-                    Software Engineer
-                  </strong>{" "}
-                  form Egypt.
-                  <br />I am{" "}
-                  <strong style={{ color: "rgb(106, 223, 255)" }}>
-                    Computer Science Student
-                  </strong>{" "}
-                  at Sohag University.
-                </p>
-                <div className="social-media">
+              <div
+                style={{
+                  margin: "auto",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-around",
+                  height: "max-content",
+                }}
+              >
+                <div className="home-container">
+                  <p>Hey</p>
+                  <h1>
+                    I am <span className="logo">Mohamed Ali Fawzi</span>
+                  </h1>
+                  <p className="details">
+                    I am{" "}
+                    <strong style={{ color: "rgb(106, 223, 255)" }}>
+                      Software Engineer
+                    </strong>{" "}
+                    form Egypt.
+                    <br />I am{" "}
+                    <strong style={{ color: "rgb(106, 223, 255)" }}>
+                      Computer Science Student
+                    </strong>
+                    .
+                  </p>
+                  {/* <div className="social-media">
                   <Link
-                    href="https://www.facebook.com/mohammed.alifawze/"
-                    className="social-icon facebook"
-                    target="_blank"
+                  href="https://www.facebook.com/mohammed.alifawze/"
+                  className="social-icon facebook"
+                  target="_blank"
                   >
-                    <FaFacebookSquare />
+                  <FaFacebookSquare />
                   </Link>
                   <Link
-                    href="https://www.linkedin.com/in/mohamed-ali-fawzi-hassan-596318203/"
-                    className="social-icon linkedin"
-                    target="_blank"
+                  href="https://www.linkedin.com/in/mohamed-ali-fawzi-hassan-596318203/"
+                  className="social-icon linkedin"
+                  target="_blank"
                   >
-                    <FaLinkedin />
+                  <FaLinkedin />
                   </Link>
                   <Link
-                    href="https://github.com/MohamedAli00949"
-                    className="social-icon github"
-                    target="_blank"
+                  href="https://github.com/MohamedAli00949"
+                  className="social-icon github"
+                  target="_blank"
                   >
-                    <FaGithub />
+                  <FaGithub />
                   </Link>
-                </div>
-                <div style={{ position: "relative" }}>
-                  <Link
-                    href="#About"
-                    onClick={() => {
-                      document
-                        .querySelector(".section-link.active")
-                        .classList.remove("active");
-                      document
-                        .getElementsByClassName("About")[0]
-                        .classList.add("active");
-                    }}
-                  >
-                    <MdOutlineDoubleArrow
-                      id="arrow"
-                      style={{
-                        transform: "rotate(90deg)",
-                        color: "#09c6f9",
-                        fontSize: "30px",
+                </div> */}
+                  <div style={{ position: "relative" }}>
+                    <Link
+                      aria-label="about arrow"
+                      href="#About"
+                      onClick={() => {
+                        document
+                          .querySelector(".section-link.active")
+                          .classList.remove("active");
+                        document
+                          .getElementsByClassName("About")[0]
+                          .classList.add("active");
                       }}
-                    />
-                  </Link>
+                    >
+                      <MdOutlineDoubleArrow
+                        id="arrow"
+                        style={{
+                          transform: "rotate(90deg)",
+                          color: "#09c6f9",
+                          fontSize: "30px",
+                        }}
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Slide>
-        </Container>
-      </section>
+            </Slide>
+          </Container>
+        </section>
+      </Suspense>
     </div>
   );
 };

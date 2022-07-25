@@ -1,0 +1,124 @@
+/* start portfolio section */
+section#Portfolio p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #09c6f9;
+  text-shadow: 0px -1px 0px #000000cf;
+  margin-block: 10px;
+  text-align: center;
+}
+
+section#Portfolio h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-block: 20px;
+  color: #09c6f9;
+  text-shadow: 2px 1px 3px #000000cf;
+}
+
+section#Portfolio ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 10px;
+  align-content: center;
+}
+
+li.project,
+.innerDiv .cover img {
+  width: calc(100% / 2.2);
+}
+
+.innerDiv {
+  width: 100%;
+  height: auto;
+  position: relative;
+  clear: both;
+}
+
+.innerDiv .cover {
+  position: relative;
+}
+
+.innerDiv .cover img {
+  opacity: 0;
+  min-width: 100%;
+}
+
+.innerDiv .cover .main-cover {
+  max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2%;
+}
+
+.overflow {
+  background-color: rgb(37 63 80 / 61%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  border-radius: 2%;
+}
+
+li.project .innerDiv:hover .overflow {
+  opacity: 1;
+  visibility: visible;
+}
+
+li.project .project-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: -10px;
+  left: 0;
+  z-index: 2;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+li.project .innerDiv:hover .project-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-details .code {
+  margin-block: 10px;
+}
+/* end portfolio section */
+
+/* start responsive design */
+@media screen and (max-width: 768px) {
+  li.project,
+  .innerDiv .cover img {
+    width: 100%;
+  }
+
+  ul.skills-container {
+    gap: 15px;
+  }
+}
+/* end responsive design */

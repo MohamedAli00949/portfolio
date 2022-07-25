@@ -1,5 +1,5 @@
-import { Container } from "@mui/material";
 import React from "react";
+import { Container } from "@mui/material";
 
 const Skills = () => {
   const skillsData = [
@@ -68,14 +68,21 @@ const Skills = () => {
             <ul className="skills-container">
               {skillsData.map((skill, index) => (
                 <li key={index} className="skill-card">
-                  <div className="circle" style={{'--present': skill.rate}}>
+                  <div className="circle" style={{ "--present": skill.rate }}>
                     <div className="dot"></div>
                     <svg>
                       <circle cx="70" cy="70" r="70"></circle>
-                      <circle cx="70" cy="70" r="70" style={{strokeDashoffset: `calc(440 - (440 * ${skill.rate} /100))`}}></circle>
+                      <circle
+                        cx="70"
+                        cy="70"
+                        r="70"
+                        style={{
+                          strokeDashoffset: `calc(440 - (440 * ${skill.rate} /100))`,
+                        }}
+                      ></circle>
                     </svg>
                     <div className="skill-details">
-                      <p style={{color: "rgb(42 42 56)"}}>{skill.name}</p>
+                      <p style={{ color: "rgb(42 42 56)" }}>{skill.name}</p>
                       <p>{skill.rate}%</p>
                     </div>
                   </div>
