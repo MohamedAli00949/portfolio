@@ -1,9 +1,9 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { IoIosSend } from "react-icons/io";
 
-const Input = lazy(() => import("../../utils/Inputs"));
-const Container = lazy(() => import("@mui/material/Container"));
-const Button = lazy(() => import("@mui/material/Button"));
+import ButtonComponent from "../../utils/Button";
+import ContainerComponent from "../../utils/Container";
+import Input from "../../utils/Inputs";
 
 const Contact = () => {
   const [successSend, setSuccessSend] = useState(false);
@@ -43,7 +43,7 @@ const Contact = () => {
           <p>Loading...</p>
         ))()}
       >
-        <Container fixed>
+        <ContainerComponent fixed>
           <div>
             <h2>Contact</h2>
             <div>
@@ -102,7 +102,7 @@ const Contact = () => {
                     }}
                   />
                   {/* <Suspense fallback={() => <p>Loading...</p>}></Suspense> */}
-                  <Button
+                  <ButtonComponent
                     aria-label="submit data"
                     variant="contained"
                     type="submit"
@@ -116,12 +116,12 @@ const Contact = () => {
                     style={{ textTransform: "capitalize" }}
                   >
                     Submit the message
-                  </Button>
+                  </ButtonComponent>
                 </form>
               </div>
             </div>
           </div>
-        </Container>
+        </ContainerComponent>
       </Suspense>
     </section>
   );

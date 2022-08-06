@@ -1,9 +1,9 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { BsDownload } from "react-icons/bs";
 
 import resume from "../../files/Mohamed_Resume.pdf";
-const Container = lazy(() => import("@mui/material/Container"));
-const Button = lazy(() => import("@mui/material/Button"));
+import ContainerComponent from "../../utils/Container";
+import ButtonComponent from "../../utils/Button";
 
 const About = () => {
   return (
@@ -16,9 +16,10 @@ const About = () => {
           <p>Loading..</p>
         ))()}
       >
-        <Container
+        <ContainerComponent
           fixed
           style={{
+            // position: "fixed",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -44,7 +45,7 @@ const About = () => {
               <p>Sohag, Egypt</p>
             </div>
             <div>
-              <Button
+              <ButtonComponent
                 aria-label="resume"
                 href={resume}
                 download="Mohamed Ali resume"
@@ -52,14 +53,15 @@ const About = () => {
                 variant="contained"
                 style={{ background: "#09c6f9" }}
                 onClick={(e) => {}}
+                text=""
               >
                 Download Resume
-              </Button>
+              </ButtonComponent>
             </div>
           </div>
           <div>
             <h2>About Me</h2>
-            <p style={{ textAlign: "justify" }}>
+            <p id="text" data-testid="text" style={{ textAlign: "justify" }}>
               Hello everybody, <br /> I am Mohamed Ali, is a web developer. I
               have started learning technologies of web development because I
               had some questions about the field like how websites are work and
@@ -72,7 +74,7 @@ const About = () => {
               contact me anytime :)
             </p>
           </div>
-        </Container>
+        </ContainerComponent>
       </Suspense>
     </section>
   );

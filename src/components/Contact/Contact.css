@@ -1,37 +1,37 @@
 /* start contact section */
 
 section#Contact h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-block: 20px;
-    color: #09c6f9;
-    text-shadow: 2px 1px 3px #000000cf;
-  }
-  
-  .inputs {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .success {
-    margin-block: 10px;
-    background: green;
-    padding: 20px;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 0px black;
-    color: white;
-    width: fit-content;
-    position: fixed;
-    top: 20%;
-    margin: 10px;
-    right: 5px;
-    z-index: 100;
-    box-shadow: 0 0 5px 0px #e7e7e7;
-    border: 2px solid #86ff86;
-  }
-  
-  /* end contact section */
+  text-align: center;
+  font-size: 40px;
+  margin-block: 20px;
+  color: #09c6f9;
+  text-shadow: 2px 1px 3px #000000cf;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.success {
+  margin-block: 10px;
+  background: green;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0px black;
+  color: white;
+  width: fit-content;
+  position: fixed;
+  top: 20%;
+  margin: 10px;
+  right: 5px;
+  z-index: 100;
+  box-shadow: 0 0 5px 0px #e7e7e7;
+  border: 2px solid #86ff86;
+}
+
+/* end contact section */
