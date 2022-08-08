@@ -1,7 +1,7 @@
 header.scrolling {
-  background-color: #173953c1;
+  background-color: #2372afc1;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 4px;
+  box-shadow: 0px 0px 4px !important;
 }
 
 div.nav-container {

@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { AppBar, IconButton, Container, Link, Slide } from "@mui/material";
+import React, { lazy, useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { scrolling, stickyNavbar } from "../../utils/ulits";
+
+const AppBar = lazy(() => import("@mui/material/AppBar"));
+const IconButton = lazy(() => import("@mui/material/IconButton"));
+const Container = lazy(() => import("@mui/material/Container"));
+const Link = lazy(() => import("@mui/material/Link"));
+const Slide = lazy(() => import("@mui/material/Slide"));
 
 const Navbar = () => {
   const sections = ["Home", "About", "Portfolio", "Skills", "Contact"];

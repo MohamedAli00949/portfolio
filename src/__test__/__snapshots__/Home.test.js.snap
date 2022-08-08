@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render footer section 1`] = `
+<body>
+  <div
+    id="containeer"
+  />
+  <div>
+    <div
+      class="home"
+      style="background-image: url(james-wheeler-AFC0XvICMgs-unsplash.webp); width: 100%; height: 100vh; display: flex; flex-direction: column;"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-fixed css-1ss2ei0-MuiContainer-root"
+      >
+        <header
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorTransparent MuiAppBar-positionFixed navbar mui-fixed css-10srjip-MuiPaper-root-MuiAppBar-root"
+          style="width: 100%; padding: 5px 20px; color: black; flex-direction: column; align-items: center; justify-content: space-between; box-shadow: 0 0 0; top: 0px;"
+        >
+          <div
+            class="nav-container"
+            style="webkit-transform: none; transform: none; webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms; transition: transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+          >
+            <h1
+              style="margin: 0px;"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways logo css-1ps4owl-MuiTypography-root-MuiLink-root"
+                href="/"
+                style="text-decoration: none; color: rgb(9, 198, 249);"
+              >
+                MAF
+              </a>
+            </h1>
+            <ul
+              class="nav-section"
+            >
+              <li>
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways section-link active Home css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#Home"
+                  style="text-decoration: none;"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways section-link false About css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#About"
+                  style="text-decoration: none;"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways section-link false Portfolio css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#Portfolio"
+                  style="text-decoration: none;"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways section-link false Skills css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#Skills"
+                  style="text-decoration: none;"
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways section-link false Contact css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#Contact"
+                  style="text-decoration: none;"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <div>
+              <button
+                aria-label="navMenu"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium nav-menu css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  color="white"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  style="color: white;"
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <section
+        class="section-container"
+        id="Home"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-fixed css-1ss2ei0-MuiContainer-root"
+          style="text-align: center; margin: auto; width: 100%;"
+        >
+          <div
+            direction="down"
+            style="opacity: 1; transform: none; text-align: center; display: flex; flex-direction: column; justify-content: space-around; margin: auto; align-items: center; transition: opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+          >
+            <div
+              class="home-container"
+            >
+              <p>
+                Hey
+              </p>
+              <h1>
+                I am 
+                <span
+                  class="logo"
+                >
+                  Mohamed Ali Fawzi
+                </span>
+              </h1>
+              <p
+                class="details"
+              >
+                I am
+                 
+                <strong
+                  style="color: rgb(106, 223, 255);"
+                >
+                  Software Engineer
+                </strong>
+                 
+                from Egypt.
+                <br />
+                I am
+                 
+                <strong
+                  style="color: rgb(106, 223, 255);"
+                >
+                  Computer Science Student
+                </strong>
+                .
+              </p>
+              <div
+                style="position: relative;"
+              >
+                <a
+                  aria-label="about arrow"
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1ps4owl-MuiTypography-root-MuiLink-root"
+                  href="#About"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    id="arrow"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    style="color: rgb(9, 198, 249); transform: rotate(90deg); font-size: 30px;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M15.5 5H11l5 7-5 7h4.5l5-7z"
+                    />
+                    <path
+                      d="M8.5 5H4l5 7-5 7h4.5l5-7z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+`;

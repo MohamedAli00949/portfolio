@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render About unit testing 1`] = `
+<body>
+  <div
+    id="containeer"
+  />
+  <div>
+    <section
+      id="About"
+      style="background: rgb(37, 63, 80); color: white; padding: 132px 0px;"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-fixed css-1ss2ei0-MuiContainer-root"
+        style="display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column-reverse;"
+      >
+        <div
+          style="width: 100%; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; text-align: center; padding-inline: 20px;"
+        >
+          <div>
+            <h2>
+              Contact details
+            </h2>
+            <p>
+              mohamedali00949@gmail.com
+            </p>
+            <p>
+              +201128001662
+            </p>
+            <p>
+              Sohag, Egypt
+            </p>
+          </div>
+          <div>
+            <a
+              aria-label="resume"
+              class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+              download="Mohamed Ali resume"
+              href="Mohamed_Resume.pdf"
+              style="background: rgb(9, 198, 249);"
+              tabindex="0"
+            >
+              <span
+                class="MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                  />
+                  <path
+                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                  />
+                </svg>
+              </span>
+              Download Resume
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </a>
+          </div>
+        </div>
+        <div>
+          <h2>
+            About Me
+          </h2>
+          <p
+            style="text-align: justify;"
+          >
+            Hello everybody, 
+            <br />
+             I am Mohamed Ali, is a web developer. I have started learning technologies of web development because I had some questions about the field like how websites are work and the difference between them and how can I make my website, and how social media works.
+            <br />
+             I have found answers to all these questions and the answer was not enough I found myself wanting to use everything I found to make amazing websites. So I am learning these technologies and programming languages. 
+            <br />
+             Thanks for reading, and feel free to contact me anytime :)
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+`;

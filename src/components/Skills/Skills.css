@@ -35,12 +35,12 @@ ul.skills-container {
   position: relative;
 }
 
-.circle svg {
+.skill-card .circle svg {
   transform: rotate(270deg);
 }
 
 .skills-container .skill-card .circle {
-  background: #9098a080;
+  background: #ffffff80;
   border-radius: 50%;
 }
 

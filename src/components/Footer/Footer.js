@@ -1,7 +1,8 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import { FaFacebookSquare, FaLinkedin, FaGithub } from "react-icons/fa";
-import { Container, Link } from "@mui/material";
+const Link = lazy(() => import("@mui/material/Link"));
+const Container = lazy(() => import("@mui/material/Container"));
 
 const Footer = () => {
   return (

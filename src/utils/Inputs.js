@@ -1,20 +1,16 @@
 import React from "react";
 
-const Input = ({ type, name, placeholder, required, onChange, value }) => {
+const Input = (props) => {
   return (
     <div className="input-container">
-      {type !== "textarea" ? (
+      {props.type !== "textarea" ? (
         <input
           className="text-input"
-          type={type}
-          id={name}
+          id={props.name}
           autoComplete="off"
-          placeholder={placeholder}
-          required={required}
-          onChange={onChange}
-          value={value}
+          {...props}
           onBlur={(e) => {
-            if (e.target.value !== "" || value !== "") {
+            if (e.target.value !== "" || props.value !== "") {
               e.target.nextElementSibling.classList.add("filled");
             } else {
               e.target.nextElementSibling.classList.remove("filled");
@@ -24,16 +20,13 @@ const Input = ({ type, name, placeholder, required, onChange, value }) => {
       ) : (
         <textarea
           className="text-input"
-          id={name}
+          id={props.name}
           autoComplete="off"
-          placeholder={placeholder}
-          required={required}
+          {...props}
           rows="5"
           style={{resize: 'none'}}
-          onChange={onChange}
-          value={value}
           onBlur={(e) => {
-            if (e.target.value !== "" || value !== "") {
+            if (e.target.value !== "" || props.value !== "") {
               e.target.nextElementSibling.classList.add("filled");
             } else {
               e.target.nextElementSibling.classList.remove("filled");
@@ -41,8 +34,8 @@ const Input = ({ type, name, placeholder, required, onChange, value }) => {
           }}
         ></textarea>
       )}
-      <label className="label" htmlFor={name}>
-        {name}
+      <label className="label" htmlFor={props.name}>
+        {props.name}
       </label>
     </div>
   );

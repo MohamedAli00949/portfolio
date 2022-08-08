@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from "react";
+import Loading from "./utils/Loading";
 // import Navbar from './components/Navbar/Navbar';
 
 import "./App.css";
@@ -9,7 +10,7 @@ const Skills = lazy(() => import("./components/Skills/Skills"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Footer = lazy(() => import("./components/Footer/Footer"));
 
-const renderLoader = () => <p>Loading....</p>;
+const renderLoader = () => <Loading />;
 
 function App() {
   return (

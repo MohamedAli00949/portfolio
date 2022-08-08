@@ -1,5 +1,5 @@
-import React from "react";
-import { Container } from "@mui/material";
+import React, { lazy } from "react";
+const Container = lazy(() => import("@mui/material/Container"));
 
 const Skills = () => {
   const skillsData = [
