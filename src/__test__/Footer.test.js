@@ -22,17 +22,17 @@ afterEach(() => {
 it("render footer section", async () => {
     await act(async () => {
         await render(<Suspense><Footer /></Suspense>)
-    })
+    });
 
     container = await document.body;
 
     expect(container.querySelector("footer"));
     expect(container.querySelector("h1 .logo").textContent).toBe("MAF");
-    expect(container.querySelector("p").textContent).toBe("Connect");
-    // console.log(container.querySelectorAll(".social-media a").length)
-    expect(container.querySelectorAll(".social-media a")[0].classList.contains("facebook")).toBeTruthy();
-    expect(container.querySelectorAll(".social-media a")[1].classList.contains("linkedin")).toBeTruthy();
-    expect(container.querySelectorAll(".social-media a")[2].classList.contains("github")).toBeTruthy();
+    expect(container.querySelector("p").textContent).toBe("Contact");
+    // console.log(container.querySelectorAll(".contact-media a").length)
+    expect(container.querySelectorAll(".contact-media a")[0].classList.contains("facebook")).toBeTruthy();
+    expect(container.querySelectorAll(".contact-media a")[1].classList.contains("linkedin")).toBeTruthy();
+    expect(container.querySelectorAll(".contact-media a")[2].classList.contains("github")).toBeTruthy();
 
     expect(container).toMatchSnapshot();
 })

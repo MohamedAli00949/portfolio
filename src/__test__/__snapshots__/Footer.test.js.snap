@@ -30,14 +30,14 @@ exports[`render footer section 1`] = `
             <p
               style="margin: 0px; font-size: 20px;"
             >
-              Connect
+              Contact
             </p>
             <div
-              class="social-media"
+              class="contact-media"
             >
               <a
                 aria-label="facebook"
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways social-icon facebook css-1ps4owl-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways contact-icon facebook css-1ps4owl-MuiTypography-root-MuiLink-root"
                 href="https://www.facebook.com/mohammed.alifawze/"
                 target="_blank"
               >
@@ -57,7 +57,7 @@ exports[`render footer section 1`] = `
               </a>
               <a
                 aria-label="linkedin"
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways social-icon linkedin css-1ps4owl-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways contact-icon linkedin css-1ps4owl-MuiTypography-root-MuiLink-root"
                 href="https://www.linkedin.com/in/mohamed-ali-fawzi-hassan-596318203/"
                 target="_blank"
               >
@@ -77,7 +77,7 @@ exports[`render footer section 1`] = `
               </a>
               <a
                 aria-label="github"
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways social-icon github css-1ps4owl-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways contact-icon github css-1ps4owl-MuiTypography-root-MuiLink-root"
                 href="https://github.com/MohamedAli00949"
                 target="_blank"
               >

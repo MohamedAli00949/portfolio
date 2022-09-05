@@ -1,7 +1,8 @@
 import React, { lazy } from "react";
 
 import { FaFacebookSquare, FaLinkedin, FaGithub } from "react-icons/fa";
-const Link = lazy(() => import("@mui/material/Link"));
+import Link from '@mui/material/Link';
+// const Link = lazy(() => import("@mui/material/Link"));
 const Container = lazy(() => import("@mui/material/Container"));
 
 const Footer = () => {
@@ -25,12 +26,12 @@ const Footer = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ margin: 0, fontSize: 20 }}>Connect</p>
-            <div className="social-media">
+            <p style={{ margin: 0, fontSize: 20 }}>Contact</p>
+            <div className="contact-media">
               <Link
                 aria-label="facebook"
                 href="https://www.facebook.com/mohammed.alifawze/"
-                className="social-icon facebook"
+                className="contact-icon facebook"
                 target="_blank"
               >
                 <FaFacebookSquare />
@@ -38,7 +39,7 @@ const Footer = () => {
               <Link
                 aria-label="linkedin"
                 href="https://www.linkedin.com/in/mohamed-ali-fawzi-hassan-596318203/"
-                className="social-icon linkedin"
+                className="contact-icon linkedin"
                 target="_blank"
               >
                 <FaLinkedin />
@@ -46,7 +47,7 @@ const Footer = () => {
               <Link
                 aria-label="github"
                 href="https://github.com/MohamedAli00949"
-                className="social-icon github"
+                className="contact-icon github"
                 target="_blank"
               >
                 <FaGithub />
