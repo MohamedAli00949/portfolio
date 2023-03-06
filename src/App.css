@@ -8,6 +8,10 @@
 @import url("./components/Portfolio/Portfolio.css");
 @import url("./components/Skills/Skills.css");
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
